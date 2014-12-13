@@ -5,7 +5,7 @@
     <groupId>com.testing.maven.poms</groupId>
     <artifactId>library-root</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.10</version>
+    <version>0.0.11-SNAPSHOT</version>
 
     <modules>
         <module>library</module>
@@ -15,7 +15,7 @@
         <url>https://github.com/mperezvega/poms.git</url>
         <connection>scm:git:git@github.com:mperezvega/poms.git</connection>
         <developerConnection>scm:git:git@github.com:mperezvega/poms.git</developerConnection>
-        <tag>library-root-0.0.10</tag>
+        <tag>HEAD</tag>
   </scm>
 
     <build>
