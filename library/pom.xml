@@ -68,13 +68,14 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>./release.sh</executable>
+                            <releaseProfiles>release</releaseProfiles>
                             <addSchema>false</addSchema>
                             <dryRun>false</dryRun>
                             <pushChanges>true</pushChanges>
                             <remoteTagging>true</remoteTagging>
                             <updateDependencies>true</updateDependencies>
                             <updateWorkingCopyVersions>true</updateWorkingCopyVersions>
+                            <executable>./release.sh</executable>
                         </configuration>
                     </execution>
                   
