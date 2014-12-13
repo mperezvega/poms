@@ -24,7 +24,31 @@
                 <version>1.3.2</version>
                 <executions>
                     
-                    <!-- USAGE: mvn clean deploy -->
+                    <!-- USAGE: mvn clean -->
+                    <execution>
+                        <id>exec-clean</id>
+                        <phase>clean</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>./clean.sh</executable>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- USAGE: mvn package -->
+                    <execution>
+                        <id>exec-package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>./package.sh</executable>
+                        </configuration>
+                    </execution>
+
+                    <!-- USAGE: mvn deploy -->
                     <execution>
                         <id>exec-deploy</id>
                         <phase>deploy</phase>
@@ -45,21 +69,15 @@
                         </goals>
                         <configuration>
                             <executable>./release.sh</executable>
+                            <addSchema>false</addSchema>
+                            <dryRun>false</dryRun>
+                            <pushChanges>true</pushChanges>
+                            <remoteTagging>true</remoteTagging>
+                            <updateDependencies>true</updateDependencies>
+                            <updateWorkingCopyVersions>true</updateWorkingCopyVersions>
                         </configuration>
                     </execution>
-                    
-                    <!-- USAGE: mvn clean package -->
-                    <execution>
-                        <id>exec-package</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>./package.sh</executable>
-                        </configuration>
-                    </execution>
-                    
+                  
                 </executions>
             </plugin>
 
