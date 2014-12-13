@@ -75,6 +75,12 @@
                             <updateDependencies>true</updateDependencies>
                             <updateWorkingCopyVersions>true</updateWorkingCopyVersions>
                             <executable>./release.sh</executable>
+                            <systemProperties>
+                                <systemProperty>
+                                    <key>EXECUTING_A_RELEASE</key>
+                                    <value>true</value>
+                                </systemProperty>
+                            </systemProperties>
                         </configuration>
                     </execution>
                   
