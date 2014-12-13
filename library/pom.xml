@@ -57,6 +57,9 @@
                         </goals>
                         <configuration>
                             <executable>./deploy.sh</executable>
+                            <arguments>
+                                <argument>${version}</argument>
+                            </arguments>
                         </configuration>
                     </execution>
                     
