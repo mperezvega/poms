@@ -66,6 +66,7 @@
                         <phase>perform</phase>
                         <goals>
                             <goal>exec</goal>
+                            <goal>release:perform</goal>
                         </goals>
                         <configuration>
                             <executable>./release.sh</executable>
@@ -75,7 +76,6 @@
                             <remoteTagging>true</remoteTagging>
                             <updateDependencies>true</updateDependencies>
                             <updateWorkingCopyVersions>true</updateWorkingCopyVersions>
-                            <goals>install</goals>
                         </configuration>
                     </execution>
                   
