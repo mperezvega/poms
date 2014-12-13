@@ -1,2 +1,6 @@
 #!/bin/sh 
-echo "DEPLOY EXECUTED !!"
+echo ""
+echo ""
+echo "    -----   DEPLOY EXECUTED -----  "
+echo ""
+echo ""

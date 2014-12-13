@@ -1,2 +1,6 @@
 #!/bin/sh 
-echo "RELEASE EXECUTED !!"
+echo ""
+echo ""
+echo "    -----   RELEASE EXECUTED -----  "
+echo ""
+echo ""

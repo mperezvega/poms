@@ -1,2 +1,6 @@
 #!/bin/sh 
-echo "PACKAGE EXECUTED !!"
+echo ""
+echo ""
+echo "    -----   PACKAGE EXECUTED -----  "
+echo ""
+echo ""

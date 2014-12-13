@@ -1,2 +1,6 @@
 #!/bin/sh 
-echo "BUILD EXECUTED !!"
+echo ""
+echo ""
+echo "    -----   BUILD EXECUTED -----  "
+echo ""
+echo ""

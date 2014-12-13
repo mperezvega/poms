@@ -1,2 +1,6 @@
 #!/bin/sh 
-echo "CLEAN EXECUTED !!"
+echo ""
+echo ""
+echo "    -----   CLEAN EXECUTED -----  "
+echo ""
+echo ""

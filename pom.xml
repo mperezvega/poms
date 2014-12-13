@@ -56,7 +56,7 @@
                 <configuration>
                     <skip>true</skip>
                     <addSchema>false</addSchema>
-                    <dryRun>true</dryRun>
+                    <dryRun>false</dryRun>
                     <pushChanges>false</pushChanges>
                     <remoteTagging>false</remoteTagging>
                     <updateDependencies>true</updateDependencies>
