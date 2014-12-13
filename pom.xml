@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.testing.maven.poms</groupId>
+    <artifactId>library-root</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <modules>
+        <module>library</module>
+    </modules>
+
+    <scm>
+        <url>https://github.com/mperezvega/poms.git</url>
+        <connection>scm:git:git@github.com:mperezvega/poms.git</connection>
+        <developerConnection>scm:git:git@github.com:mperezvega/poms.git</developerConnection>
+    </scm>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav-jackrabbit</artifactId>
+                <version>2.2</version>
+            </extension>
+        </extensions>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.6.1</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <skip>true</skip>
+                    <addSchema>false</addSchema>
+                    <dryRun>true</dryRun>
+                    <pushChanges>false</pushChanges>
+                    <remoteTagging>false</remoteTagging>
+                    <updateDependencies>true</updateDependencies>
+                    <updateWorkingCopyVersions>true</updateWorkingCopyVersions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>Releases</name>
+            <url>https://localhost:9966/nexus/content/repositories/Releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>Snapshots</name>
+            <url>https://localhost:9966/nexus/content/repositories/Snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

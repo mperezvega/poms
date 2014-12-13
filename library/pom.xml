@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <artifactId>library-root</artifactId>
+        <groupId>com.testing.maven.poms</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.testing.maven.poms.library</groupId>
+    <artifactId>library</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <executions>
+                    
+                    <!-- USAGE: mvn clean deploy -->
+                    <execution>
+                        <id>exec-deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>./deploy.sh</executable>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- USAGE: mvn release:clean release:prepare release:perform -->
+                    <execution>
+                        <id>exec-release</id>
+                        <phase>release</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>./release.sh</executable>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- USAGE: mvn clean package -->
+                    <execution>
+                        <id>exec-package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>./package.sh</executable>
+                        </configuration>
+                    </execution>
+                    
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
