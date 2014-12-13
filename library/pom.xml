@@ -4,7 +4,7 @@
     <parent>
         <artifactId>library-root</artifactId>
         <groupId>com.testing.maven.poms</groupId>
-        <version>0.0.4-SNAPSHOT</version>
+        <version>0.0.4</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -13,7 +13,7 @@
     <groupId>com.testing.maven.poms.library</groupId>
     <artifactId>library</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.4</version>
 
     <build>
         <plugins>
