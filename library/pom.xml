@@ -68,7 +68,6 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <releaseProfiles>release</releaseProfiles>
                             <addSchema>false</addSchema>
                             <dryRun>false</dryRun>
                             <pushChanges>true</pushChanges>
