@@ -63,7 +63,7 @@
                     <!-- USAGE: mvn release:clean release:prepare release:perform -->
                     <execution>
                         <id>exec-release</id>
-                        <phase>release</phase>
+                        <phase>release:perform</phase>
                         <goals>
                             <goal>exec</goal>
                         </goals>
